@@ -5,8 +5,8 @@
 #' @examples
 #' \dontrun{
 #' a = parliamentAPI()
-#' a$CalData(startD , endD)
-#'}
+#' a$CalData("2001-01-01" , "2010-01-01")
+#' }
 #'@details
 #'Swedish Parliament API is called in order to fetch members details from 1990 to current date
 #'Same Class is furthur used in making Shiny Dashborad to show details on UI
@@ -15,6 +15,7 @@
 #'@import RCurl
 #'@import RSQLite
 #'@import odbc
+#'@import methods
 
 parliamentAPI = setRefClass("parliamentAPI",
   fields = list(
@@ -99,7 +100,6 @@ parliamentAPI = setRefClass("parliamentAPI",
     },#initialize = function(){
     
     CalData = function(startD, endD){
-      
       library(RSQLite)
       library(odbc)
       con = dbConnect(RSQLite::SQLite(),":memory:")

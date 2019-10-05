@@ -24,6 +24,6 @@ Same Class is furthur used in making Shiny Dashborad to show details on UI
 \examples{
 \dontrun{
 a = parliamentAPI()
-a$CalData(startD , endD)
+a$CalData("2001-01-01" , "2010-01-01")
 }
 }
