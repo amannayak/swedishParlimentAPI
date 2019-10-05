@@ -1,0 +1,20 @@
+Package: swedishParlimentAPI
+Type: Package
+Title: Call Swedish Parliment API
+Version: 1.0
+Date: 2019-10-05
+Authors@R: c(person("Aman Kumar", "Nayak", role = c("aut", "cre"),
+                     email = "amana551@student.liu.se"),
+              person("Yash", "Pawar", role = "aut",
+                     email = "yaspa154@student.liu.se"))
+Maintainer: Aman Kumar Nayak <amana551@student.liu.se>
+Description: This package contain a class to call Swedish Parilment API and plot thus class can be used in any shiny package so that it can be displayed on UI.
+License: MIT + file LICENSE
+Depends: R (>= 2.10)
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr 
+RoxygenNote: 6.1.1
