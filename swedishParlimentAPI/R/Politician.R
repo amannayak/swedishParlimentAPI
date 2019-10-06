@@ -28,7 +28,7 @@ parliamentAPI = setRefClass("parliamentAPI",
     initialize = function(){
       library(RJSONIO)
       library(RCurl)
-      
+  
       #Form URL with inserted parameters 
       #URL Can be updated based on type of paramerters Passed to it
       personalDetailsURL = "http://data.riksdagen.se/personlista/?iid=&fnamn=&enamn=&f_ar=&kn=&parti=&valkrets=&rdlstatus=samtliga&org=&utformat=json&sort=sorteringsnamn&sortorder=asc&termlista="

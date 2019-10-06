@@ -1,0 +1,50 @@
+---
+title: "API_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{API_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+load("C:/Users/DELL PC/Desktop/advanced programming in R/lab assignments/swedishParlimentAPI/swedishParlimentAPI/vignettes/data_api.RData")
+library(swedishParlimentAPI)
+```
+swedishParliamentAPI package is used to access the API which handles the data of the members of Swedish Parliament. 
+
+In this package an RC class "parliamentAPI" is implemented. It has an initialize function that returns a data frame consisting of information of every member and their respective constituencies. 
+
+# Implementation method of class swedishParliamentAPI:
+```{r}
+parliament_data <- parliamentAPI$new()
+member_data <- parliament_data$initialize()
+
+```
+
+# Implementation of method CalData:
+CalData takes the start date and end date as arguments and retrns the data frame containing the information of members during that period. The method passes SQL query for the given dates and returns a data frame.
+
+ It takes argument in the following way:
+ a$calData(startD = "yyyy-mm-dd", endD = "yyyy-mm-dd")
+ 
+```{r}
+a <- parliamentAPI()
+a$CalData(startD = "2001-01-01" , endD = "2010-01-01")
+
+```
+
+
+
+
+
+
+
+

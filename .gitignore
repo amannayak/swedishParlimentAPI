@@ -37,3 +37,5 @@ rsconnect/
 
 #Ignore 
 *.Rproj
+.Rproj.user
+inst/doc
