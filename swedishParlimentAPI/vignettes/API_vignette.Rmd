@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-load("C:/Users/DELL PC/Desktop/advanced programming in R/lab assignments/swedishParlimentAPI/swedishParlimentAPI/vignettes/data_api.RData")
+#load("C:/Users/DELL PC/Desktop/advanced programming in R/lab assignments/swedishParlimentAPI/swedishParlimentAPI/vignettes/data_api.RData")
 library(swedishParlimentAPI)
 ```
 swedishParliamentAPI package is used to access the API which handles the data of the members of Swedish Parliament. 
