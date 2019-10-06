@@ -102,8 +102,18 @@ parliamentAPI = setRefClass("parliamentAPI",
     CalData = function(startD, endD){
       library(RSQLite)
       library(odbc)
+      
+      if(!(is.character(startD) && is.character(endD)))
+        stop("Passed date should be character in YYYY-MM-DD format")
+      
+      date_format = "%y-%m-%d"
+      if((!is.na(as.Date(startD,date_format))) && (!is.na(as.Date(endD,date_format))))
+        stop("enterd date is not correct, please use date format as YYYY-MM-DD ")
+      
+      
       if(as.Date(startD) > as.Date(endD))
         stop("Please check date as End date should be greater then Start Date")
+      
       
       con = dbConnect(RSQLite::SQLite(),":memory:")
       
