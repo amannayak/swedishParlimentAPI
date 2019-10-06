@@ -102,6 +102,9 @@ parliamentAPI = setRefClass("parliamentAPI",
     CalData = function(startD, endD){
       library(RSQLite)
       library(odbc)
+      if(as.Date(startD) > as.Date(endD))
+        stop("Please check date as End date should be greater then Start Date")
+      
       con = dbConnect(RSQLite::SQLite(),":memory:")
       
       #dbExecute is preferred in case that the query results are not of interest
